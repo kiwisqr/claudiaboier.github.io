@@ -1,0 +1,107 @@
+// --- Star generator: n = number of stars
+@function multiple-box-shadow($n) {
+  $value: #{random(2000)}px #{random(2000)}px rgba(255, 255, 255, 0.9);
+
+  @for $i from 2 through $n {
+    $value: #{$value}, #{random(2000)}px #{random(2000)}px rgba(255, 255, 255, 0.9);
+  }
+
+  @return $value;
+}
+
+$shadows-small: multiple-box-shadow(700);
+$shadows-medium: multiple-box-shadow(200);
+$shadows-big: multiple-box-shadow(100);
+
+// ---- Masthead background wrapper
+.custom-bg {
+  position: relative;
+  overflow: hidden;
+  // base color from Bootstrap primary
+  background: radial-gradient(
+    ellipse at bottom,
+    lighten($primary, 8%) 0%,
+    darken($primary, 18%) 100%
+  );
+
+  // keep content above stars
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+// shared layer styling
+.stars {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+// layer 1
+#stars {
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  box-shadow: $shadows-small;
+  animation: animStar 50s linear infinite;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 2000px;
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    box-shadow: $shadows-small;
+  }
+}
+
+// layer 2
+#stars2 {
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow: $shadows-medium;
+  animation: animStar 100s linear infinite;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 2000px;
+    width: 2px;
+    height: 2px;
+    background: transparent;
+    box-shadow: $shadows-medium;
+  }
+}
+
+// layer 3
+#stars3 {
+  width: 3px;
+  height: 3px;
+  background: transparent;
+  box-shadow: $shadows-big;
+  animation: animStar 150s linear infinite;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 2000px;
+    width: 3px;
+    height: 3px;
+    background: transparent;
+    box-shadow: $shadows-big;
+  }
+}
+
+// Move stars upward forever
+@keyframes animStar {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-2000px);
+  }
+}

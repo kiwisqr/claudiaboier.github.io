@@ -1,26 +1,43 @@
 // Portfolio Modal 4
-#portfolioModal4.portfolio-modal.modal.fade(tabindex='-1', aria-labelledby='portfolioModal4', aria-hidden='true')
-    .modal-dialog.modal-xl
-        .modal-content
-            .modal-header.border-0
-                button.btn-close(type='button', data-bs-dismiss='modal', aria-label='Close')
-            .modal-body.text-center.pb-5
-                .container
-                    .row.justify-content-center
-                        .col-lg-8
-                            // Portfolio Modal - Title
-                            h2.portfolio-modal-title.text-secondary.text-uppercase.mb-0 Controller
-                            // Icon Divider
-                            .divider-custom
-                                .divider-custom-line
-                                .divider-custom-icon
-                                    i.fas.fa-star
-                                .divider-custom-line
-                            // Portfolio Modal - Image
-                            img.img-fluid.rounded.mb-5(src='assets/img/portfolio/game.png', alt='...')
-                            // Portfolio Modal - Text
-                            p.mb-4
-                                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
-                            button.btn.btn-primary(data-bs-dismiss='modal')
-                                i.fas.fa-xmark.fa-fw
-                                | Close Window
+.portfolio-modal.modal.fade#portfolioModal4(tabindex="-1" aria-labelledby="portfolioModal4" aria-hidden="true")
+  .modal-dialog.modal-xl
+    .modal-content
+      .modal-header.border-0
+        button.btn-close(type="button" data-bs-dismiss="modal" aria-label="Close")
+      .modal-body.pb-5
+        .container
+          .row.justify-content-center
+            .col-lg-8
+              //- Portfolio Modal - Title (commented out in HTML)
+              //- h2.portfolio-modal-title.text-secondary.text-uppercase.mb-0 Controller
+              //- Icon Divider (commented out in HTML)
+              //- .divider-custom
+              //-   .divider-custom-line
+              //-   .divider-custom-icon
+              //-     i.fas.fa-star
+              //-   .divider-custom-line
+
+              section.mb-4
+                h2 Movies API – RESTful CRUD Application
+
+                h3 Short description
+                p
+                  | Designed and developed a RESTful CRUD API for managing movie data using FastAPI.
+                  | The project includes input validation, structured error handling, and a lightweight
+                  | frontend for interacting with the API.
+
+                h3 Tech
+                p Python · FastAPI · SQLite · HTML · CSS · JavaScript
+
+                h3 Live demo
+                p
+                  a(href="https://movies-api-5vq7.onrender.com/" target="_blank" rel="noopener noreferrer") 🌐 View live application
+
+                h3 CTA
+                p
+                  a(href="#" target="_blank" rel="noopener noreferrer") 🔗 View source code & implementation details on GitHub
+
+              .d-flex.justify-content-center
+                button.btn.btn-primary(data-bs-dismiss="modal")
+                  i.fas.fa-xmark.fa-fw
+                  | Close Window

@@ -1,26 +1,51 @@
 // Portfolio Modal 2
-#portfolioModal2.portfolio-modal.modal.fade(tabindex='-1', aria-labelledby='portfolioModal2', aria-hidden='true')
-    .modal-dialog.modal-xl
-        .modal-content
-            .modal-header.border-0
-                button.btn-close(type='button', data-bs-dismiss='modal', aria-label='Close')
-            .modal-body.text-center.pb-5
-                .container
-                    .row.justify-content-center
-                        .col-lg-8
-                            // Portfolio Modal - Title
-                            h2.portfolio-modal-title.text-secondary.text-uppercase.mb-0 Tasty Cake
-                            // Icon Divider
-                            .divider-custom
-                                .divider-custom-line
-                                .divider-custom-icon
-                                    i.fas.fa-star
-                                .divider-custom-line
-                            // Portfolio Modal - Image
-                            img.img-fluid.rounded.mb-5(src='assets/img/portfolio/cake.png', alt='...')
-                            // Portfolio Modal - Text
-                            p.mb-4
-                                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
-                            button.btn.btn-primary(data-bs-dismiss='modal')
-                                i.fas.fa-xmark.fa-fw
-                                | Close Window
+.portfolio-modal.modal.fade#portfolioModal2(tabindex="-1" aria-labelledby="portfolioModal2" aria-hidden="true")
+  .modal-dialog.modal-xl
+    .modal-content
+      .modal-header.border-0
+        button.btn-close(type="button" data-bs-dismiss="modal" aria-label="Close")
+      .modal-body.pb-5
+        .container
+          .row.justify-content-center
+            .col-lg-8
+              //- Portfolio Modal - Title (commented out in HTML)
+              //- h2.portfolio-modal-title.text-center.text-secondary.text-uppercase.mb-0 Tasty Cake
+              //- Icon Divider (commented out in HTML)
+              //- .divider-custom
+              //-   .divider-custom-line
+              //-   .divider-custom-icon
+              //-     i.fas.fa-star
+              //-   .divider-custom-line
+
+              section.mb-4
+                h2 UI Test Automation – DemoQA
+
+                h3 Short description
+                p
+                  | Java-based UI automation framework validating interactive web components using
+                  | Selenium WebDriver, built with
+                  | Page Object Model and Behavior-Driven Development (BDD) principles.
+                  br
+                  strong Website under test:
+                  a(href="https://demoqa.com/" target="_blank" rel="noopener noreferrer") DemoQA
+
+                h3 Tech
+                p Java · Selenium WebDriver · JUnit · Cucumber · POM
+
+                h3 GIFs
+                .gifs
+                  figure
+                    img(src="assets/img/portfolio/selenium_java/selenium_browser.gif" alt="Automated user login flow executed in browser" width="600")
+                    figcaption Automated interaction with DemoQA UI components executed in browser
+                  figure
+                    img(src="assets/img/portfolio/selenium_java/cucumber_report.gif" alt="Automated user login flow executed in browser" width="600")
+                    figcaption Cucumber report showing results of automated UI scenarios
+
+                h3 CTA
+                p
+                  a(href="https://github.com/kiwisqr/SeleniumJava" target="_blank" rel="noopener noreferrer") 🔗 View full project & documentation on GitHub
+
+              .d-flex.justify-content-center
+                button.btn.btn-primary(data-bs-dismiss="modal")
+                  i.fas.fa-xmark.fa-fw
+                  | Close Window

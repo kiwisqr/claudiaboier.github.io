@@ -1,26 +1,52 @@
 // Portfolio Modal 3
-#portfolioModal3.portfolio-modal.modal.fade(tabindex='-1', aria-labelledby='portfolioModal3', aria-hidden='true')
-    .modal-dialog.modal-xl
-        .modal-content
-            .modal-header.border-0
-                button.btn-close(type='button', data-bs-dismiss='modal', aria-label='Close')
-            .modal-body.text-center.pb-5
-                .container
-                    .row.justify-content-center
-                        .col-lg-8
-                            // Portfolio Modal - Title
-                            h2.portfolio-modal-title.text-secondary.text-uppercase.mb-0 Circus Tent
-                            // Icon Divider
-                            .divider-custom
-                                .divider-custom-line
-                                .divider-custom-icon
-                                    i.fas.fa-star
-                                .divider-custom-line
-                            // Portfolio Modal - Image
-                            img.img-fluid.rounded.mb-5(src='assets/img/portfolio/circus.png', alt='...')
-                            // Portfolio Modal - Text
-                            p.mb-4
-                                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
-                            button.btn.btn-primary(data-bs-dismiss='modal')
-                                i.fas.fa-xmark.fa-fw
-                                | Close Window
+.portfolio-modal.modal.fade#portfolioModal3(tabindex="-1" aria-labelledby="portfolioModal3" aria-hidden="true")
+  .modal-dialog.modal-xl
+    .modal-content
+      .modal-header.border-0
+        button.btn-close(type="button" data-bs-dismiss="modal" aria-label="Close")
+      .modal-body.pb-5
+        .container
+          .row.justify-content-center
+            .col-lg-8
+              //- Portfolio Modal - Title (commented out in HTML)
+              //- h2.portfolio-modal-title.text-secondary.text-uppercase.mb-0 Circus Tent
+              //- Icon Divider (commented out in HTML)
+              //- .divider-custom
+              //-   .divider-custom-line
+              //-   .divider-custom-icon
+              //-     i.fas.fa-star
+              //-   .divider-custom-line
+
+              section.mb-4
+                h2 Automated API Testing – Simple Books API
+
+                h3 Short description
+                p
+                  | Automated REST API test suite built with Postman and Newman, covering full CRUD
+                  | operations with data-driven execution and CLI automation.
+                  br
+                  strong API under test:
+                  a(href="https://github.com/vdespa/introduction-to-postman-course/blob/main/simple-books-api.md" target="_blank" rel="noopener noreferrer") Simple Books API
+
+                h3 Tech
+                p Postman · Newman · REST API
+
+                h3 GIFs
+                .gifs
+                  figure
+                    img(src="assets/img/portfolio/postman/postman_newman_run.gif" alt="Newman CLI run" width="600")
+                    figcaption Newman CLI run
+                  figure
+                    img(src="assets/img/portfolio/postman/report_newman.gif" alt="Newman CLI run" width="600")
+                    figcaption Newman HTML report after execution
+                  p
+                    a(href="https://your-report-link.com" target="_blank") 🔗 View full Newman HTML report
+
+                h3 CTA
+                p
+                  a(href="#" target="_blank" rel="noopener noreferrer") 🔗 View full project & documentation on GitHub
+
+              .d-flex.justify-content-center
+                button.btn.btn-primary(data-bs-dismiss="modal")
+                  i.fas.fa-xmark.fa-fw
+                  | Close Window

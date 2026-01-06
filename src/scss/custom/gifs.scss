@@ -1,0 +1,58 @@
+.gifs {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  figure.gif-item {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4f7fb; // card background
+    padding: 0.5rem;
+    border-radius: 10px;
+    transition: transform 0.2s, box-shadow 0.2s;
+
+    img {
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      display: block;
+    }
+
+    figcaption {
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #0b1220;
+      background-color: rgba(255, 255, 255, 0.95); // slightly transparent for contrast
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      max-width: 600px;
+      transition: background-color 0.2s, color 0.2s;
+    }
+
+    // Hover effect on the whole card
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+
+      figcaption {
+        background-color: #e0f0ff; // change background slightly on hover
+        color: #0369a1; // darker blue text on hover
+      }
+    }
+  }
+
+  // Responsive adjustments
+  @media (max-width: 600px) {
+    figure.gif-item img {
+      width: 100%;
+    }
+    figure.gif-item figcaption {
+      font-size: 0.9rem;
+      padding: 0.4rem 0.8rem;
+    }
+  }
+}
