@@ -1,31 +1,71 @@
-// 
+//
 // Portfolio
-// 
+//
 
+// Portfolio Items
 .portfolio {
     .portfolio-item {
         cursor: pointer;
         position: relative;
         display: block;
         max-width: 25rem;
-        border-radius: $border-radius;
+        margin: 0 auto;
+        border-radius: 10px;
         overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
 
+        &:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        img.img-fluid {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        // Overlay
         .portfolio-item-caption {
             position: absolute;
             top: 0;
             left: 0;
-            transition: $transition-base;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             opacity: 0;
-            background-color: fade-out($primary, .1);
+            background-color: rgba(0, 0, 0, 0.6); // darker overlay for readability
+            transition: opacity 0.3s ease, transform 0.3s ease;
 
             &:hover {
                 opacity: 1;
+                transform: scale(1.05);
             }
 
             .portfolio-item-caption-content {
-                font-size: 1.5rem;
+                text-align: center;
+                color: #fff;
+
+                i.fas {
+                    font-size: 3rem;
+                    display: block;
+                    margin-bottom: 0.5rem;
+                }
+
+                span {
+                    display: block;
+                    font-size: 0.9rem;
+                    opacity: 0.85;
+                    margin-top: 0.25rem;
+                }
             }
+        }
+
+        // Responsive for smaller screens
+        @media (max-width: 768px) {
+            max-width: 100%;
         }
     }
 }

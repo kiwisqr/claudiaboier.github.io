@@ -8,7 +8,7 @@ html(lang='en')
         meta(name='description', content='')
         meta(name='author', content='')
 
-        title Freelancer - Start Bootstrap Theme
+        title Claudia Boier - Portfolio
 
         // Favicon
         link(rel='icon', type='image/x-icon', href='assets/favicon.ico')
@@ -76,29 +76,33 @@ html(lang='en')
                         .portfolio-item.mx-auto(data-bs-toggle='modal', data-bs-target='#portfolioModal1')
                             .portfolio-item-caption.d-flex.align-items-center.justify-content-center.h-100.w-100
                                 .portfolio-item-caption-content.text-center.text-white
-                                    i.fas.fa-plus.fa-3x
-                            img.img-fluid(src='assets/img/portfolio/selenium-python.png', alt='...')
+                                    i.fas.fa-eye.fa-3x
+                                    span Selenium Python Automation
+                            img.img-fluid(src='assets/img/portfolio/selenium-python.png', alt='Selenium Python Automation Project')
                     // Portfolio Item 2
                     .col-md-6.col-lg-4.mb-5
                         .portfolio-item.mx-auto(data-bs-toggle='modal', data-bs-target='#portfolioModal2')
                             .portfolio-item-caption.d-flex.align-items-center.justify-content-center.h-100.w-100
                                 .portfolio-item-caption-content.text-center.text-white
-                                    i.fas.fa-plus.fa-3x
-                            img.img-fluid(src='assets/img/portfolio/selenium-java.png', alt='...')
+                                    i.fas.fa-eye.fa-3x
+                                    span Selenium Java Automation
+                            img.img-fluid(src='assets/img/portfolio/selenium-java.png', alt='Selenium Java Automation Project')
                     // Portfolio Item 3
                     .col-md-6.col-lg-4.mb-5
                         .portfolio-item.mx-auto(data-bs-toggle='modal', data-bs-target='#portfolioModal3')
                             .portfolio-item-caption.d-flex.align-items-center.justify-content-center.h-100.w-100
                                 .portfolio-item-caption-content.text-center.text-white
-                                    i.fas.fa-plus.fa-3x
-                            img.img-fluid(src='assets/img/portfolio/postman.png', alt='...')
+                                    i.fas.fa-eye.fa-3x
+                                    span Postman API Testing
+                            img.img-fluid(src='assets/img/portfolio/postman.png', alt='Postman API Testing Project')
                     // Portfolio Item 4
                     .col-md-6.col-lg-4.mb-5.mb-lg-0
                         .portfolio-item.mx-auto(data-bs-toggle='modal', data-bs-target='#portfolioModal4')
                             .portfolio-item-caption.d-flex.align-items-center.justify-content-center.h-100.w-100
                                 .portfolio-item-caption-content.text-center.text-white
-                                    i.fas.fa-plus.fa-3x
-                            img.img-fluid(src='assets/img/portfolio/movies_api.png', alt='...')
+                                    i.fas.fa-eye.fa-3x
+                                    span Movies API Project
+                            img.img-fluid(src='assets/img/portfolio/movies_api.png', alt='Movies API Project')
 
         // About Section
         section#about.page-section.bg-primary.text-white.mb-0
@@ -124,63 +128,43 @@ html(lang='en')
                             br
                             | I thrive in collaborative environments and am always excited to take on new challenges in web testing.
 
-                // Certificate Card
-                .certificate-card
-                    .certificate-logo
-                        img(src="assets/img/istqb-logo.png", alt="ISTQB Logo")
-                    .certificate-content
-                        h3 ISTQB® Certified Tester Foundation Level (CTFL)
-                        a.certificate-link(
-                            href="https://d3k1q7waft5oho.cloudfront.net/media/certificates/Brightest2024029087.pdf",
-                            target="_blank"
-                        )
-                            | View Certificate
-                            svg.bi.bi-box-arrow-up-right(
-                                xmlns="http://www.w3.org/2000/svg",
-                                width="16",
-                                height="16",
-                                fill="currentColor",
-                                viewBox="0 0 16 16"
-                            )
-                                path(
-                                    fill-rule="evenodd",
-                                    d="M6.364 13.364a.5.5 0 0 1-.708 0l-5-5a.5.5 0 1 1 .708-.708L6 12.293V3.5a.5.5 0 0 1 1 0v8.793l4.636-4.637a.5.5 0 0 1 .708.708l-5 5z"
-                                )
-
         // Footer
         footer.footer.text-center
             .container
                 .row
-                    // Footer Location
-                    .col-lg-4.mb-5.mb-lg-0
-                        h4.text-uppercase.mb-4 Location
-                        p.lead.mb-0
-                            | 2215 John Daniel Drive
-                            br
-                            | Clark, MO 65243
-                    // Footer Social Icons
-                    .col-lg-4.mb-5.mb-lg-0
-                        h4.text-uppercase.mb-4 Around the Web
-                        a.btn.btn-outline-light.btn-social.mx-1(href='#!')
-                            i.fab.fa-fw.fa-facebook-f
-                        a.btn.btn-outline-light.btn-social.mx-1(href='#!')
-                            i.fab.fa-fw.fa-twitter
-                        a.btn.btn-outline-light.btn-social.mx-1(href='#!')
-                            i.fab.fa-fw.fa-linkedin-in
-                        a.btn.btn-outline-light.btn-social.mx-1(href='#!')
-                            i.fab.fa-fw.fa-dribbble
-                    // Footer About Text
-                    .col-lg-4
-                        h4.text-uppercase.mb-4 About Freelancer
-                        p.lead.mb-0
-                            | Freelance is a free to use, MIT licensed Bootstrap theme created by
-                            a(href='http://startbootstrap.com') Start Bootstrap
-                            | .
+                    // Certificates Section
+                    .col-12
+                        h4.text-uppercase.mb-4 Certificates
+                        // Certificate Card
+                        .certificate-card
+                            .certificate-logo
+                                img(src="assets/img/istqb-logo.png", alt="ISTQB Logo")
+                            .certificate-content
+                                h3 ISTQB® Certified Tester Foundation Level (CTFL)
+                                a.certificate-link(
+                                    href="https://d3k1q7waft5oho.cloudfront.net/media/certificates/Brightest2024029087.pdf",
+                                    target="_blank"
+                                )
+                                    | View Certificate
+                                    svg.bi.bi-box-arrow-up-right(
+                                        xmlns="http://www.w3.org/2000/svg",
+                                        width="16",
+                                        height="16",
+                                        fill="currentColor",
+                                        viewBox="0 0 16 16"
+                                    )
+                                        path(
+                                            fill-rule="evenodd",
+                                            d="M6.364 13.364a.5.5 0 0 1-.708 0l-5-5a.5.5 0 1 1 .708-.708L6 12.293V3.5a.5.5 0 0 1 1 0v8.793l4.636-4.637a.5.5 0 0 1 .708.708l-5 5z"
+                                        )
 
         // Copyright Section
         div.copyright.py-4.text-center.text-white
             .container
-                small Copyright &copy; Your Website 2023
+                p
+                    | ©
+                    span#year
+                    |  Claudia Boier
 
         // Portfolio Modals
         include includes/portfolio-modal-1.pug
@@ -200,3 +184,9 @@ html(lang='en')
         // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 
         script(src='https://cdn.startbootstrap.com/sb-forms-latest.js')
+
+        // Update year dynamically
+        script.
+            document.addEventListener('DOMContentLoaded', function() {
+                document.getElementById('year').textContent = new Date().getFullYear();
+            });
